@@ -1,13 +1,10 @@
 package com.example.listgridapp;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.Button;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.listViewId);
         gridView = findViewById(R.id.gridViewId);
 
-
+        // sample user list.
         userList.add(new User(R.drawable.user_01,"Ritik kumar"));
         userList.add(new User(R.drawable.user_02,"Priyanshu Sharma"));
         userList.add(new User(R.drawable.user_03,"Prince Shah"));
