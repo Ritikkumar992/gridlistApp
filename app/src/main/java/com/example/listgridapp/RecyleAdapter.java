@@ -12,17 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyleAdapter extends RecyclerView.Adapter<RecyleAdapter.UserViewHolder> {
     private final List<User> userList;
     private final Context context;
+    // constructor.
     public RecyleAdapter(List<User> userList, Context context){
         this.userList = userList;
         this.context = context;
     }
     @NonNull
-    @Override
+    @Override // onCreateViewHolder() method.
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.new_user_list_item,parent,false);
         return new UserViewHolder(view);
     }
-    @Override
+    @Override // onBindViewHolder() method.
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         User user = userList.get(position);
         holder.imageView.setImageResource(user.getUserImg());
@@ -30,8 +31,9 @@ public class RecyleAdapter extends RecyclerView.Adapter<RecyleAdapter.UserViewHo
     }
     @Override
     public int getItemCount() {
-        return userList.size();
+        return userList.size(); // userList size.
     }
+    // UserViewHolder class 
     static class UserViewHolder extends RecyclerView.ViewHolder{
         private final TextView nameView;
         private final ImageView imageView;
