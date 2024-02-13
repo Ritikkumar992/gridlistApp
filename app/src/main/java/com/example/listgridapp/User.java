@@ -1,10 +1,10 @@
 package com.example.listgridapp;
-
 import android.widget.ImageView;
 
+// User Class
 public class User {
-    private int userImgId;
-    private String name;
+    private int userImgId; // imgId
+    private String name; // name
 
     // constructor
     public User(int userImgId, String name){
