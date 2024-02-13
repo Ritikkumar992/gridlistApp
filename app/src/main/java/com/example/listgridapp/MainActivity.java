@@ -48,11 +48,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(recycleAdapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
+        
+        // listView.
         listView.setOnClickListener(view->{
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         });
+        // gridView.
         gridView.setOnClickListener(view ->{
             recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         });
